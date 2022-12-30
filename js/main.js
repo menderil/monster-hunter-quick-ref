@@ -26,11 +26,16 @@ function getMonster(){
             monsterName.innerText = searchResult[0].name
 
             //RESISTANCES
-            //grabs resistance response
-            //capitalizes the first letter to look prettier :)
-            let resistanceText = searchResult[0].resistances[0].element
-            resistanceText = resistanceText[0].toUpperCase() + resistanceText.slice(1)
-            resistances.innerText = resistanceText
+            if(searchResult[0].resistances.length == 0){
+                //if there are no entries in the resistance array:
+                resistances.innerText = 'None'
+            }else{
+                //grabs resistance
+                //capitalizes the first letter to look prettier :)
+                let resistanceText = searchResult[0].resistances[0].element
+                resistanceText = resistanceText[0].toUpperCase() + resistanceText.slice(1)
+                resistances.innerText = resistanceText
+            }
             
 
 
