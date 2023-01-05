@@ -6,6 +6,7 @@ function getMonster(){
     let searchInput = document.querySelector('input').value
     //access insertion points from the HTML
     let monsterName = document.querySelector('#monsterName')
+    let image = document.querySelector('#monsterImage')
     let resistances = document.querySelector('#resistances')
     let weaknessList = document.querySelector('#weaknesses')
     
@@ -24,6 +25,9 @@ function getMonster(){
             //NAME
             //inserts the monster name
             monsterName.innerText = searchResult[0].name
+            
+            //IMAGE
+            image.src = `assets/${searchInput}.jpg`
 
             //RESISTANCES
             if(searchResult[0].resistances.length == 0){

@@ -24,11 +24,24 @@
 /******************************************
 /* LAYOUT
 /*******************************************/
+
+/*for display testing*/
+/* section{
+  border: 1px solid gray;
+} */
+
 body, 
 body > section{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+img{
+  max-width: 500px;
+  max-height: 400px;
+}
+.columns{
+  display: flex;
 }
 /******************************************
 /* ADDITIONAL STYLES
